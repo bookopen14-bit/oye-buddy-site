@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your Oye Buddy account</title>
+<meta name="description" content="How to delete your Oye Buddy account and data, in the app or by email.">
+<meta name="robots" content="index, follow">
+<style>
+  :root { --bg:#0c0b0a; --surface:#16130f; --raised:#1f1b16; --line:rgba(201,169,110,.28); --fg:#f3ede6; --muted:#b9b0a5; --subtle:#857c72; --gold:#c9a96e; --champagne:#efdfb9; --coral:#d4565a; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+  .eyebrow { color: var(--gold); letter-spacing: .18em; text-transform: uppercase; font-size: 12px; font-weight: 600; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 400; font-size: 40px; line-height: 1.15; margin: 6px 0 12px; }
+  h2 { font-size: 18px; margin: 34px 0 10px; color: var(--champagne); }
+  p, li { color: var(--muted); }
+  strong { color: var(--fg); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; margin: 14px 0; }
+  ol.steps { padding-left: 22px; } ol.steps li { margin: 6px 0; }
+  .path { display:inline-block; background: var(--raised); color: var(--champagne); border-radius: 8px; padding: 1px 8px; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td, th { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid rgba(243,237,230,.08); }
+  th { color: var(--champagne); font-weight: 600; }
+  label { display:block; font-size: 14px; color: var(--fg); margin: 12px 0 6px; }
+  input, select, textarea { width:100%; background: var(--raised); color: var(--fg); border: 1px solid rgba(243,237,230,.12); border-radius: 12px; padding: 12px 14px; font: inherit; }
+  textarea { min-height: 84px; resize: vertical; }
+  button { margin-top: 16px; width: 100%; border: 0; border-radius: 14px; padding: 14px; font: 600 16px system-ui, sans-serif; color: #fff; background: linear-gradient(135deg, #e0767a, var(--coral)); cursor: pointer; }
+  .fine { font-size: 13px; color: var(--subtle); }
+  a { color: var(--champagne); }
+  footer { margin-top: 40px; font-size: 13px; color: var(--subtle); line-height: 1.6; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Oye Buddy · Account &amp; data</div>
+  <h1>Delete your account</h1>
+  <p>Oye Buddy (Android app <strong>app.oyebuddy.mobile</strong>) lets you delete your account and personal data at any time. Deletion from inside the app is immediate.</p>
+
+  <h2>1. Delete it in the app (fastest)</h2>
+  <div class="card">
+    <ol class="steps">
+      <li>Open Oye Buddy and sign in.</li>
+      <li>Go to <span class="path">You</span> → <span class="path">Settings</span> (gear icon).</li>
+      <li>Scroll to the bottom and tap <span class="path">Delete account</span>, then confirm.</li>
+    </ol>
+    <p class="fine">Your photos are removed first, then your account. You are signed out and cannot sign in to that account again. Suspended or banned accounts can still delete themselves.</p>
+  </div>
+
+  <h2>2. Can’t open the app? Ask us by email</h2>
+  <div class="card">
+    <p>Send a deletion request from the <strong>email address you signed up with</strong> (or your Google account’s email). We verify it’s you and delete the account within <strong>7 days</strong>, then confirm by email.</p>
+    <form id="req" novalidate>
+      <label for="email">Email you used for Oye Buddy</label>
+      <input id="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      <label for="name">Name on your profile (optional)</label>
+      <input id="name" type="text" autocomplete="name">
+      <label for="why">Anything we should know? (optional)</label>
+      <textarea id="why" maxlength="500"></textarea>
+      <button type="submit">Write deletion request email</button>
+      <p class="fine">This opens your email app with the request filled in; nothing is sent until you press Send. Or write to <a id="mail" href="#"></a> with the subject “Delete my Oye Buddy account”.</p>
+    </form>
+  </div>
+
+  <h2>What is deleted</h2>
+  <div class="card">
+    <table>
+      <tr><th>Deleted immediately</th><td>Profile (name, age, gender, bio, job, interests), photos, approximate location, likes and passes, matches, chats and messages, Buddy Feed posts, discovery and notification settings, device push tokens, read receipts, subscription record, your verification selfie (if you took one), your verification result and the automatic safety-check results for your photos. Photo and selfie files are erased from storage within minutes.</td></tr>
+      <tr><th>Kept, without your profile</th><td>Reports you made or that were made about you, moderation case records and security logs, kept only as long as needed for user safety, disputes and legal duties (for example, records required under India’s IT Rules 2021 for 180 days). A record that “an account was deleted” is kept with no user id.</td></tr>
+      <tr><th>Kept as safety evidence</th><td>If you or the other person had blocked the other, or there is an open report or safety case involving either of you, that chat is <strong>not</strong> deleted with your account. It is hidden from everyone except our safety team, unlinked from your account, and deleted 180 days later once nothing about it is still open.</td></tr>
+      <tr><th>Kept if the account was banned</th><td>A one-way, keyed hash of the email/phone so the same person can’t sign up again after a ban. It can’t be turned back into your email or phone.</td></tr>
+      <tr><th>Backups</th><td>Overwritten on a rolling basis.</td></tr>
+    </table>
+  </div>
+
+  <h2>Questions or complaints</h2>
+  <p>Write to <a class="support" href="#"></a>. You can also contact our Grievance Officer, Mayank Chandravanshi, at <a id="grievance" href="#"></a> (we acknowledge within 24 hours and resolve within 15 days). See also our privacy policy in the app under <span class="path">You</span> → <span class="path">Settings</span> → <span class="path">Privacy Policy</span>.</p>
+
+  <footer>Oye Buddy is operated by Oyeteck Innovations · <a id="company" href="#"></a> · Address: Currency Tower, Raipur, Chhattisgarh 492001 · Made in India</footer>
+</main>
+<script>
+  // Same values as EXPO_PUBLIC_SUPPORT_EMAIL / EXPO_PUBLIC_GRIEVANCE_EMAIL.
+  const SUPPORT_EMAIL = "oyebuddy.support@gmail.com";
+  const GRIEVANCE_EMAIL = "oyeteck@gmail.com";
+  const COMPANY_EMAIL = "oyeteck@gmail.com";
+
+  const mailto = (to, subject, body = "") => `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  for (const a of [document.getElementById("mail"), ...document.querySelectorAll("a.support")]) {
+    a.textContent = SUPPORT_EMAIL; a.href = mailto(SUPPORT_EMAIL, "Delete my Oye Buddy account");
+  }
+  const g = document.getElementById("grievance"); g.textContent = GRIEVANCE_EMAIL; g.href = mailto(GRIEVANCE_EMAIL, "Oye Buddy grievance");
+  const c = document.getElementById("company"); c.textContent = COMPANY_EMAIL; c.href = mailto(COMPANY_EMAIL, "Oyeteck Innovations");
+  document.getElementById("req").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email");
+    if (!email.value || !email.checkValidity()) { email.focus(); email.style.borderColor = "#d4565a"; return; }
+    const body = [
+      "Please delete my Oye Buddy account and its data.", "",
+      `Account email: ${email.value.trim()}`,
+      `Profile name: ${document.getElementById("name").value.trim() || "-"}`,
+      `Notes: ${document.getElementById("why").value.trim() || "-"}`, "",
+      "I understand this cannot be undone.",
+    ].join("\n");
+    window.location.href = mailto(SUPPORT_EMAIL, "Delete my Oye Buddy account", body);
+  });
+</script>
+</body>
+</html>
