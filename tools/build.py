@@ -12,7 +12,7 @@ To move to the custom domain, change BASE_URL below, re-run, and commit.
 """
 import html, pathlib, re, markdown
 
-BASE_URL = "https://bookopen14-bit.github.io/oye-buddy-site"  # later: https://oyebuddy.in
+BASE_URL = "https://oyebuddy.in"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TOOLS = ROOT / "tools"
 SUPPORT = "oyebuddy.support@gmail.com"

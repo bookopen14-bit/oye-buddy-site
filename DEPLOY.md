@@ -1,5 +1,11 @@
 # Deployment notes: Cloudflare Pages
 
+**Current setup (2026-10-04): Direct Upload, not Git integration.** Run `tools/deploy-cloudflare.sh` after changes
+(needs `CLOUDFLARE_API_TOKEN` with Pages Edit and `CLOUDFLARE_ACCOUNT_ID`; wrangler 3 works on Node 20, wrangler 4 needs Node 22).
+It uploads the built site without `tools/`, and deploys `tools/www-redirect/` to a separate Pages project `oye-buddy-www`
+(bound to `www.oyebuddy.in`) whose `_redirects` sends everything 301 to `https://oyebuddy.in/:splat`. That replaces a
+Redirect Rule. GitHub Pages stays on, so the old `bookopen14-bit.github.io/oye-buddy-site/...` URLs keep working.
+
 Two Cloudflare Pages projects on the free plan:
 
 | Project | Source | Domain |

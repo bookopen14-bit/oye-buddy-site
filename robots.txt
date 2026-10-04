@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bookopen14-bit.github.io/oye-buddy-site/sitemap.xml
+Sitemap: https://oyebuddy.in/sitemap.xml
