@@ -88,7 +88,7 @@ If a personal data breach happens, we will inform the **Data Protection Board of
 
 ## 11. Grievance Officer
 
-**Mayank Chandravanshi**, Grievance Officer
+**Mayank**, Grievance Officer
 Oyeteck Innovations
 Email: grievance@oyebuddy.in
 Address: Currency Tower, Raipur, Chhattisgarh 492001
@@ -103,5 +103,5 @@ We may update this policy. We will tell you in the app before material changes t
 
 **Oyeteck Innovations** (operator of Oye Buddy)
 Support: support@oyebuddy.in
-Company: oyeteck@gmail.com
+Company: contact@oyebuddy.in
 Address: Currency Tower, Raipur, Chhattisgarh 492001

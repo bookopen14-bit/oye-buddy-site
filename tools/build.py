@@ -109,7 +109,7 @@ FOOTER = f"""<footer class="site-footer">
         <h4>Contact</h4>
         <ul>
           <li>Support<br><a href="mailto:{SUPPORT}">{SUPPORT}</a></li>
-          <li>Grievance Officer: Mayank Chandravanshi<br><a href="mailto:{GRIEVANCE}">{GRIEVANCE}</a></li>
+          <li>Grievance Officer: <a href="mailto:{GRIEVANCE}">{GRIEVANCE}</a></li>
           <li>Emergency in India: <a href="tel:112">112</a></li>
         </ul>
       </div>

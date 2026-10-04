@@ -55,7 +55,7 @@ Oye Buddy is provided "as is". To the extent the law allows, we are not liable f
 
 ## 10. Intermediary status
 
-Oye Buddy is an intermediary under the Information Technology Act, 2000 and follows the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Complaints about content can be sent to our Grievance Officer, Mayank Chandravanshi, at grievance@oyebuddy.in (see the Grievance Officer section).
+Oye Buddy is an intermediary under the Information Technology Act, 2000 and follows the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Complaints about content can be sent to our Grievance Officer at grievance@oyebuddy.in (see the Grievance Officer section).
 
 ## 11. Governing law and disputes
 
@@ -69,5 +69,5 @@ We may update these Terms. We will notify you in the app before material changes
 
 **Oyeteck Innovations** (operator of Oye Buddy)
 Support: support@oyebuddy.in
-Company: oyeteck@gmail.com
+Company: contact@oyebuddy.in
 Address: Currency Tower, Raipur, Chhattisgarh 492001

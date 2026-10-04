@@ -43,13 +43,13 @@
   </div>
 
   <h2>Questions or complaints</h2>
-  <p>Write to <a class="support" href="#"></a>. You can also contact our Grievance Officer, Mayank Chandravanshi, at <a id="grievance" href="#"></a> (we acknowledge within 24 hours and resolve within 15 days). See also our <a href="privacy.html">Privacy Policy</a> (also in the app under <span class="path">You</span> → <span class="path">Settings</span> → <span class="path">Privacy Policy</span>).</p>
+  <p>Write to <a class="support" href="#"></a>. You can also contact our Grievance Officer at <a id="grievance" href="#"></a> (we acknowledge within 24 hours and resolve within 15 days). See also our <a href="privacy.html">Privacy Policy</a> (also in the app under <span class="path">You</span> → <span class="path">Settings</span> → <span class="path">Privacy Policy</span>).</p>
 </main>
 <script>
   // Same values as EXPO_PUBLIC_SUPPORT_EMAIL / EXPO_PUBLIC_GRIEVANCE_EMAIL.
   const SUPPORT_EMAIL = "support@oyebuddy.in";
   const GRIEVANCE_EMAIL = "grievance@oyebuddy.in";
-  const COMPANY_EMAIL = "oyeteck@gmail.com";
+  const COMPANY_EMAIL = "contact@oyebuddy.in";
 
   const mailto = (to, subject, body = "") => `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   for (const a of [document.getElementById("mail"), ...document.querySelectorAll("a.support")]) {
