@@ -36,4 +36,4 @@ We may remove content, limit features, or suspend or permanently remove accounts
 
 ## Report and block
 
-Use **Report** in any chat if someone breaks these rules, and **Block** to stop all contact. Reports are confidential. You can also write to our Grievance Officer at oyeteck@gmail.com.
+Use **Report** in any chat if someone breaks these rules, and **Block** to stop all contact. Reports are confidential. You can also write to our Grievance Officer at grievance@oyebuddy.in.

@@ -4,12 +4,12 @@ In accordance with the Information Technology Act, 2000, the Information Technol
 
 **Name:** Mayank Chandravanshi
 **Company:** Oyeteck Innovations (operator of Oye Buddy)
-**Email:** oyeteck@gmail.com
+**Email:** grievance@oyebuddy.in
 **Address:** Currency Tower, Raipur, Chhattisgarh 492001
 
 ## How to raise a complaint
 
-Write to oyeteck@gmail.com with:
+Write to grievance@oyebuddy.in with:
 
 1. your name and the email address on your Oye Buddy account;
 2. what happened, with the profile name and date (screenshots help);

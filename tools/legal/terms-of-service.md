@@ -12,7 +12,7 @@ These Terms are an agreement between you and **Oyeteck Innovations**, which oper
 
 ## 2. Your account
 
-You are responsible for keeping your login details safe and for everything that happens under your account. Tell us at oyebuddy.support@gmail.com if you think someone else has accessed it.
+You are responsible for keeping your login details safe and for everything that happens under your account. Tell us at support@oyebuddy.in if you think someone else has accessed it.
 
 ## 3. How Oye Buddy works
 
@@ -55,7 +55,7 @@ Oye Buddy is provided "as is". To the extent the law allows, we are not liable f
 
 ## 10. Intermediary status
 
-Oye Buddy is an intermediary under the Information Technology Act, 2000 and follows the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Complaints about content can be sent to our Grievance Officer, Mayank Chandravanshi, at oyeteck@gmail.com (see the Grievance Officer section).
+Oye Buddy is an intermediary under the Information Technology Act, 2000 and follows the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Complaints about content can be sent to our Grievance Officer, Mayank Chandravanshi, at grievance@oyebuddy.in (see the Grievance Officer section).
 
 ## 11. Governing law and disputes
 
@@ -68,6 +68,6 @@ We may update these Terms. We will notify you in the app before material changes
 ## 13. Contact
 
 **Oyeteck Innovations** (operator of Oye Buddy)
-Support: oyebuddy.support@gmail.com
+Support: support@oyebuddy.in
 Company: oyeteck@gmail.com
 Address: Currency Tower, Raipur, Chhattisgarh 492001

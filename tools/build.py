@@ -15,8 +15,8 @@ import html, pathlib, re, markdown
 BASE_URL = "https://oyebuddy.in"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TOOLS = ROOT / "tools"
-SUPPORT = "oyebuddy.support@gmail.com"
-GRIEVANCE = "oyeteck@gmail.com"
+SUPPORT = "support@oyebuddy.in"
+GRIEVANCE = "grievance@oyebuddy.in"
 
 LEGAL = [  # (md file, output, nav label, meta description)
     ("privacy-policy.md", "privacy.html", "Privacy", "How Oyeteck Innovations collects, uses and protects your personal data in the Oye Buddy dating app, under India's DPDP Act 2023."),

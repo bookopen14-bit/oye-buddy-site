@@ -6,7 +6,7 @@ This Privacy Policy explains how **Oyeteck Innovations**, which operates Oye Bud
 
 ## 1. Who can use Oye Buddy
 
-Oye Buddy is only for adults aged **18 to 80**. We do not knowingly collect personal data of anyone under 18. If we learn that a user is under 18, we delete the account and its data. If you believe a child is using Oye Buddy, write to oyebuddy.support@gmail.com.
+Oye Buddy is only for adults aged **18 to 80**. We do not knowingly collect personal data of anyone under 18. If we learn that a user is under 18, we delete the account and its data. If you believe a child is using Oye Buddy, write to support@oyebuddy.in.
 
 ## 2. Data we collect
 
@@ -76,7 +76,7 @@ Under the DPDP Act you have the right to:
 - **grievance redressal** through our Grievance Officer (below);
 - **nominate** another person to exercise your rights in case of death or incapacity.
 
-To use these rights, write to oyebuddy.support@gmail.com or to our Grievance Officer at oyeteck@gmail.com. We may need to verify your identity.
+To use these rights, write to support@oyebuddy.in or to our Grievance Officer at grievance@oyebuddy.in. We may need to verify your identity.
 
 ## 9. Security
 
@@ -90,7 +90,7 @@ If a personal data breach happens, we will inform the **Data Protection Board of
 
 **Mayank Chandravanshi**, Grievance Officer
 Oyeteck Innovations
-Email: oyeteck@gmail.com
+Email: grievance@oyebuddy.in
 Address: Currency Tower, Raipur, Chhattisgarh 492001
 
 We acknowledge complaints within **24 hours** and resolve them within **15 days** of receipt. If you are not satisfied, you may approach the Data Protection Board of India.
@@ -102,6 +102,6 @@ We may update this policy. We will tell you in the app before material changes t
 ## 13. Contact
 
 **Oyeteck Innovations** (operator of Oye Buddy)
-Support: oyebuddy.support@gmail.com
+Support: support@oyebuddy.in
 Company: oyeteck@gmail.com
 Address: Currency Tower, Raipur, Chhattisgarh 492001
