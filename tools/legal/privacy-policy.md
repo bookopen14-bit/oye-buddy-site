@@ -11,6 +11,7 @@ Oye Buddy is only for adults aged **18 to 80**. We do not knowingly collect pers
 ## 2. Data we collect
 
 - **Account data:** email address, password (stored only as a secure hash by our authentication provider), and, if you use Google sign-in, your Google account email and name.
+- **Waitlist and invite data:** if you join the waitlist on oyebuddy.in we store the name, email, phone (optional) and city you enter, only to invite you to the beta. If you use an invite code, we record which code you used. Feedback you send from the app is stored with your account.
 - **Profile data you choose to share:** name, age, gender, photos, bio, job, interests, what you are looking for, city.
 - **Location:** your device location, when you allow it. We store it **rounded to roughly 1 km** and never show your exact location to anyone. Other people only see an approximate distance. If you share a pin in chat, it is rounded to about 100 m.
 - **Activity:** likes, passes, matches, messages, Buddy Feed posts (which expire automatically), blocks and reports.
@@ -61,7 +62,7 @@ Some of our service providers may process data outside India (for example in the
 - We keep your account data while your account is active.
 - **When you delete your account, your profile, photos, location, likes, matches and messages are deleted immediately** from our live systems. Backups are overwritten on a rolling basis.
 - **Exception, for safety:** if either person in a chat had blocked the other, or there is an open report or safety case involving either of you, that chat is kept (hidden from users, visible only to our safety team, no longer linked to your account) and deleted 180 days after your account was deleted, once nothing about it is still open.
-- Buddy Feed posts expire automatically after a few hours.
+- Buddy Feed posts expire automatically (after 4 hours up to 1 week, as you choose).
 - Verification selfies are deleted 30 days after the review decision (immediately if not completed, withdrawn, or the account is deleted). Photos removed by our safety team are deleted after 30 days, kept until then only to handle appeals.
 - We may keep a minimal record of reports, blocks and security logs (without your profile) for as long as needed to keep the community safe, prevent repeat abuse, resolve disputes or meet legal obligations (for example, records required under the IT Rules 2021 for 180 days).
 

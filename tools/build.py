@@ -150,6 +150,7 @@ def build_pages():
     for name, title, desc in [
         ("index.html", "Oye Buddy: meet real people nearby | Indian dating app", "Oye Buddy is a premium Indian dating app for meeting real people nearby. Discover, Buddy Feed, an area map that never shows exact locations, selfie-verified badges and strong safety tools. Coming soon on Google Play: join the beta."),
         ("delete-account.html", "Delete your Oye Buddy account", "How to delete your Oye Buddy account and data, in the app or by email, and what is deleted or kept."),
+        ("beta.html", "Get the Oye Buddy beta | Closed beta in Raipur", "Invite-only Android beta of Oye Buddy for Raipur. Enter your invite code to download."),
         ("404.html", "Page not found | Oye Buddy", "This page does not exist. Go back to Oye Buddy."),
     ]:
         src = (TOOLS / "pages" / name).read_text()
@@ -157,7 +158,7 @@ def build_pages():
         if name == "delete-account.html":
             body = body.replace("<!--DOCNAV-->", doc_nav(name))
         page = head(title, desc, name, extra.strip() + "\n" if extra.strip() else "") + header(home=name == "index.html") + body.strip() + "\n" + FOOTER + "</body>\n</html>\n"
-        if name == "404.html":
+        if name in ("404.html", "beta.html"):
             page = page.replace('<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">')
         (ROOT / name).write_text(page)
         print("wrote", name)

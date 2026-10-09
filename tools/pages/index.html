@@ -182,7 +182,7 @@
       <div>
         <p class="eyebrow">Early access</p>
         <h2 class="display" id="waitlist-title">Be one of the <span class="gold-text">first</span></h2>
-        <p class="lead">Oye Buddy is coming soon to Google Play. Join the beta waitlist and we'll email you when there is a spot in your city.</p>
+        <p class="lead">Oye Buddy is coming soon to Google Play. Join the beta waitlist and we'll message you when there is a spot in your city.</p>
         <div class="cta-row" style="margin-top:26px">
           <span class="store" aria-label="Google Play, coming soon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.3-9.4-9.3-9.4z" fill="#e6d3a8"/><path d="M16.6 15.1l-3.1-3.1 3.1-3.1 3.6 2c1 .6 1 1.6 0 2.2l-3.6 2z" fill="#c9a96e"/><path d="M16.6 15.1l-3.1-3.1-9.3 9.4c.4.4 1 .4 1.6.1l10.8-6.4z" fill="#b48a45"/><path d="M16.6 8.9L5.8 2.5c-.6-.3-1.2-.3-1.6.1l9.3 9.4 3.1-3.1z" fill="#f7e7bf"/></svg>
@@ -191,15 +191,18 @@
         </div>
       </div>
       <form class="form" id="waitlist-form" novalidate>
-        <label>Email<input id="wl-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+        <label>Name<input id="wl-name" type="text" name="name" autocomplete="given-name" maxlength="80" placeholder="Your first name"></label>
+        <label>Email<input id="wl-email" type="email" name="email" required autocomplete="email" maxlength="160" placeholder="you@example.com"></label>
         <div class="row">
-          <label>City<input id="wl-city" type="text" name="city" autocomplete="address-level2" placeholder="Raipur"></label>
-          <label>Phone<select id="wl-device" name="device"><option>Android</option><option>iPhone</option></select></label>
+          <label>City<input id="wl-city" type="text" name="city" autocomplete="address-level2" maxlength="60" placeholder="Raipur"></label>
+          <label>Phone (optional)<input id="wl-phone" type="tel" name="phone" autocomplete="tel" maxlength="20" placeholder="WhatsApp number"></label>
         </div>
-        <label class="check"><input id="wl-age" type="checkbox" required> I confirm I am 18 or older.</label>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><label>Website<input id="wl-website" type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label class="check"><input id="wl-age" type="checkbox" required> I confirm I am 18 or older and agree to the <a href="privacy.html">Privacy Policy</a>.</label>
         <p class="err" id="wl-err" role="alert"></p>
-        <button class="btn btn-gold" type="submit">Join the beta waitlist</button>
-        <p class="fine">This opens your email app with the request filled in. Nothing is sent until you press Send. Or write to <a href="mailto:support@oyebuddy.in?subject=Oye%20Buddy%20beta%20waitlist">support@oyebuddy.in</a>.</p>
+        <p class="ok" id="wl-ok" role="status" style="display:none;color:var(--champagne);font-weight:500;margin:0"></p>
+        <button class="btn btn-gold" type="submit" id="wl-btn">Join the beta waitlist</button>
+        <p class="fine">We store your details only to invite you to the beta and tell you when Oye Buddy opens in your city. Delete them any time: write to <a href="mailto:support@oyebuddy.in?subject=Remove%20me%20from%20the%20waitlist">support@oyebuddy.in</a>. Already have an invite code? <a href="beta.html">Get the beta app</a>.</p>
       </form>
     </div>
   </div>
@@ -216,7 +219,7 @@
       <details><summary>Is Oye Buddy free?</summary><p>Yes. Everyone gets a daily number of free likes, Buddy Feed hearts and replies, reset at midnight IST. Optional plans unlock extras like unlimited likes and seeing who liked you. Plans and prices are the same for everyone, and the full terms are shown in the app before any payment.</p></details>
       <details><summary>Can people see my exact location?</summary><p>No. Your location is stored rounded to about 1 km, and other people only see an approximate distance. The Nearby map shows activity by area, never individual pins. If you share a pin in a chat, it is rounded to about 100 m.</p></details>
       <details><summary>How does selfie verification work?</summary><p>It's optional. You take one live selfie in a random pose with your front camera. A trained member of our safety team compares it with your profile photos. We don't use automated face recognition or create a face template. The selfie is deleted 30 days after the decision, or right away if you withdraw or delete your account.</p></details>
-      <details><summary>What is the Buddy Feed?</summary><p>Short, public plans from people nearby, like “Chai at 6, join me?”. Posts disappear after a few hours. Reply to one to start a chat.</p></details>
+      <details><summary>What is the Buddy Feed?</summary><p>Short, public plans from people nearby, like “Chai at 6, join me?”. Posts disappear on their own, after 4 hours up to a week. Reply to one to start a chat.</p></details>
       <details><summary>What if someone makes me uncomfortable?</summary><p>Open the chat menu and tap Block to stop all contact, Report to tell our safety team, or Unmatch to end the conversation. Reports are confidential. For serious issues you can also contact our <a href="grievance.html">Grievance Officer</a>. In an emergency, call 112.</p></details>
       <details><summary>Who can use Oye Buddy?</summary><p>Adults aged 18 and over, with one account per person and real photos of themselves. See our <a href="community-guidelines.html">Community Guidelines</a>.</p></details>
       <details><summary>How do I delete my account?</summary><p>In the app, go to You → Settings → Delete account. Deletion is immediate. If you can't open the app, see <a href="delete-account.html">Delete account</a> to request it by email.</p></details>
@@ -225,21 +228,30 @@
 </section>
 </main>
 <script>
-  // Waitlist: no backend. Builds a mailto: with the details so nothing is stored or sent by this page.
+  // Waitlist: inserts one row into Supabase (public.waitlist). The anon key may only INSERT; it cannot read anything.
   (function () {
     var f = document.getElementById("waitlist-form"); if (!f) return;
+    var API = "https://iioxtfycaholzvcemrop.supabase.co", KEY = "sb_publishable_3Brt2Q6hcWyHDP0rsYTqEg_QSZBgeIN";
+    var $ = function (id) { return document.getElementById(id); };
     f.addEventListener("submit", function (e) {
       e.preventDefault();
-      var email = document.getElementById("wl-email"), age = document.getElementById("wl-age"), err = document.getElementById("wl-err");
-      err.textContent = "";
+      var email = $("wl-email"), age = $("wl-age"), err = $("wl-err"), ok = $("wl-ok"), btn = $("wl-btn");
+      err.textContent = ""; ok.style.display = "none";
       if (!email.value || !email.checkValidity()) { err.textContent = "Please enter a valid email address."; email.focus(); return; }
       if (!age.checked) { err.textContent = "Oye Buddy is only for adults 18 and over."; age.focus(); return; }
-      var body = ["Please add me to the Oye Buddy beta waitlist.", "",
-        "Email: " + email.value.trim(),
-        "City: " + (document.getElementById("wl-city").value.trim() || "-"),
-        "Phone: " + document.getElementById("wl-device").value,
-        "I confirm I am 18 or older."].join("\n");
-      window.location.href = "mailto:support@oyebuddy.in?subject=" + encodeURIComponent("Oye Buddy beta waitlist") + "&body=" + encodeURIComponent(body);
+      var done = function () { f.reset(); ok.textContent = "You're on the list. We'll email you when there is a spot for you."; ok.style.display = "block"; };
+      // Honeypot: bots fill the hidden field. Pretend it worked; send nothing.
+      if ($("wl-website").value) { done(); return; }
+      btn.disabled = true; btn.textContent = "Joining...";
+      fetch(API + "/rest/v1/waitlist", {
+        method: "POST",
+        headers: { "apikey": KEY, "Authorization": "Bearer " + KEY, "Content-Type": "application/json", "Prefer": "return=minimal" },
+        body: JSON.stringify({ name: $("wl-name").value.trim(), email: email.value.trim(), city: $("wl-city").value.trim(), phone: $("wl-phone").value.trim(), source: "site" })
+      }).then(function (r) {
+        // 409 = this email is already on the list: same friendly answer.
+        if (r.ok || r.status === 409) done(); else err.textContent = "Couldn't join right now. Please try again, or write to support@oyebuddy.in.";
+      }).catch(function () { err.textContent = "No connection. Please try again."; })
+        .then(function () { btn.disabled = false; btn.textContent = "Join the beta waitlist"; });
     });
   })();
 </script>
