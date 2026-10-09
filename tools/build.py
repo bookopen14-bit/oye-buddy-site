@@ -19,11 +19,11 @@ SUPPORT = "support@oyebuddy.in"
 GRIEVANCE = "grievance@oyebuddy.in"
 
 LEGAL = [  # (md file, output, nav label, meta description)
-    ("privacy-policy.md", "privacy.html", "Privacy", "How Oyeteck Innovations collects, uses and protects your personal data in the Oye Buddy dating app, under India's DPDP Act 2023."),
-    ("terms-of-service.md", "terms.html", "Terms", "The Terms of Service for Oye Buddy, the Indian dating app for meeting real people nearby."),
-    ("community-guidelines.md", "community-guidelines.html", "Community Guidelines", "The rules that keep Oye Buddy kind, real and safe: be real, be respectful, no scams, report and block."),
-    ("safety-tips.md", "safety-tips.html", "Safety tips", "Simple habits for meeting someone from Oye Buddy safely, plus India emergency helplines."),
-    ("grievance-officer.md", "grievance.html", "Grievance Officer", "Contact the Oye Buddy Grievance Officer under the IT Rules 2021 and DPDP Act 2023. Acknowledged within 24 hours, resolved within 15 days."),
+    ("privacy-policy.md", "privacy.html", "Privacy", "How Oyeteck Innovations collects, uses and protects your personal data in the OyeBuddy dating app, under India's DPDP Act 2023."),
+    ("terms-of-service.md", "terms.html", "Terms", "The Terms of Service for OyeBuddy, the Indian dating app for meeting real people nearby."),
+    ("community-guidelines.md", "community-guidelines.html", "Community Guidelines", "The rules that keep OyeBuddy kind, real and safe: be real, be respectful, no scams, report and block."),
+    ("safety-tips.md", "safety-tips.html", "Safety tips", "Simple habits for meeting someone from OyeBuddy safely, plus India emergency helplines."),
+    ("grievance-officer.md", "grievance.html", "Grievance Officer", "Contact the OyeBuddy Grievance Officer under the IT Rules 2021 and DPDP Act 2023. Acknowledged within 24 hours, resolved within 15 days."),
 ]
 DOC_NAV = [(o, l) for _, o, l, _ in LEGAL] + [("delete-account.html", "Delete account")]
 
@@ -43,7 +43,7 @@ def head(title, desc, path, extra=""):
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Oye Buddy">
+<meta property="og:site_name" content="OyeBuddy">
 <meta property="og:locale" content="en_IN">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
@@ -51,7 +51,7 @@ def head(title, desc, path, extra=""):
 <meta property="og:image" content="{BASE_URL}/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Oye Buddy: gold pin logo and app screens on black">
+<meta property="og:image:alt" content="OyeBuddy: gold pin logo and app screens on black">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{html.escape(title)}">
 <meta name="twitter:description" content="{html.escape(desc)}">
@@ -72,7 +72,7 @@ def header(home=False):
     p = "" if home else "index.html"
     return f"""<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{p or '#top'}" aria-label="Oye Buddy home">{PIN}<span>Oye Buddy</span></a>
+    <a class="brand" href="{p or '#top'}" aria-label="OyeBuddy home">{PIN}<span>OyeBuddy</span></a>
     <nav class="nav" aria-label="Main">
       <a href="{p}#features">Features</a>
       <a href="{p}#safety">Safety</a>
@@ -87,10 +87,10 @@ FOOTER = f"""<footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="index.html" aria-label="Oye Buddy home">{PIN}<span>Oye Buddy</span></a>
+        <a class="brand" href="index.html" aria-label="OyeBuddy home">{PIN}<span>OyeBuddy</span></a>
         <p class="muted" style="max-width:30em;margin:16px 0 0">Meet real people nearby. Local, live, unplanned. Strictly 18+.</p>
         <address style="margin-top:16px">
-          Oye Buddy is operated by <strong style="color:var(--fg);font-weight:500">Oyeteck Innovations</strong><br>
+          OyeBuddy is operated by <strong style="color:var(--fg);font-weight:500">Oyeteck Innovations</strong><br>
           Currency Tower, Raipur, Chhattisgarh 492001, India
         </address>
       </div>
@@ -116,7 +116,7 @@ FOOTER = f"""<footer class="site-footer">
     </div>
     <div class="foot-bottom">
       <span>© 2026 Oyeteck Innovations. Made in India.</span>
-      <span>Oye Buddy is for adults 18+ only. Google Play is a trademark of Google LLC.</span>
+      <span>OyeBuddy is for adults 18+ only. Google Play is a trademark of Google LLC.</span>
     </div>
   </div>
 </footer>
@@ -141,17 +141,17 @@ def build_legal():
         title = title_m.group(1)
         body = body.replace(title_m.group(0), "", 1)
         body = re.sub(r"<p><strong>Last updated:</strong>(.*?)</p>", r'<p class="updated">Last updated:\1</p>', body)
-        page = (head(f"{title} | Oye Buddy", desc, out) + header() +
-                f'<main id="main" class="doc">\n<p class="eyebrow">Oye Buddy · Legal</p>\n<h1>{title}</h1>\n{doc_nav(out)}\n{body}\n</main>\n' + FOOTER + "</body>\n</html>\n")
+        page = (head(f"{title} | OyeBuddy", desc, out) + header() +
+                f'<main id="main" class="doc">\n<p class="eyebrow">OyeBuddy · Legal</p>\n<h1>{title}</h1>\n{doc_nav(out)}\n{body}\n</main>\n' + FOOTER + "</body>\n</html>\n")
         (ROOT / out).write_text(page)
         print("wrote", out)
 
 def build_pages():
     for name, title, desc in [
-        ("index.html", "Oye Buddy: meet real people nearby | Indian dating app", "Oye Buddy is a premium Indian dating app for meeting real people nearby. Discover, Buddy Feed, an area map that never shows exact locations, selfie-verified badges and strong safety tools. Coming soon on Google Play: join the beta."),
-        ("delete-account.html", "Delete your Oye Buddy account", "How to delete your Oye Buddy account and data, in the app or by email, and what is deleted or kept."),
-        ("beta.html", "Get the Oye Buddy beta | Closed beta in Raipur", "Invite-only Android beta of Oye Buddy for Raipur. Enter your invite code to download."),
-        ("404.html", "Page not found | Oye Buddy", "This page does not exist. Go back to Oye Buddy."),
+        ("index.html", "OyeBuddy: meet real people nearby | Indian dating app", "OyeBuddy is a premium Indian dating app for meeting real people nearby. Discover, Buddy Feed, an area map that never shows exact locations, selfie-verified badges and strong safety tools. Coming soon on Google Play: join the beta."),
+        ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
+        ("beta.html", "Get the OyeBuddy beta | Closed beta in Raipur", "Invite-only Android beta of OyeBuddy for Raipur. Enter your invite code to download."),
+        ("404.html", "Page not found | OyeBuddy", "This page does not exist. Go back to OyeBuddy."),
     ]:
         src = (TOOLS / "pages" / name).read_text()
         extra, _, body = src.partition("<!--BODY-->")

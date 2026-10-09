@@ -3,7 +3,7 @@
 In accordance with the Information Technology Act, 2000, the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the Digital Personal Data Protection Act, 2023, the details of our Grievance Officer are:
 
 **Name:** Mayank
-**Company:** Oyeteck Innovations (operator of Oye Buddy)
+**Company:** Oyeteck Innovations (operator of OyeBuddy)
 **Email:** grievance@oyebuddy.in
 **Address:** Currency Tower, Raipur, Chhattisgarh 492001
 
@@ -11,7 +11,7 @@ In accordance with the Information Technology Act, 2000, the Information Technol
 
 Write to grievance@oyebuddy.in with:
 
-1. your name and the email address on your Oye Buddy account;
+1. your name and the email address on your OyeBuddy account;
 2. what happened, with the profile name and date (screenshots help);
 3. what you would like us to do.
 

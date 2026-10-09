@@ -1,15 +1,15 @@
 <style>.doc label{display:block;font-size:14px;color:var(--fg);margin:12px 0 6px}.doc input{width:100%;background:var(--raised);color:var(--fg);border:1px solid rgba(243,237,230,.12);border-radius:14px;padding:12px 14px;font:inherit}</style>
 <!--BODY-->
 <main id="main" class="doc">
-  <p class="eyebrow">Oye Buddy · Account &amp; data</p>
+  <p class="eyebrow">OyeBuddy · Account &amp; data</p>
   <h1>Delete your account</h1>
   <!--DOCNAV-->
-  <p>Oye Buddy (Android app <strong>app.oyebuddy.mobile</strong>) lets you delete your account and personal data at any time. Deletion from inside the app is immediate.</p>
+  <p>OyeBuddy (Android app <strong>app.oyebuddy.mobile</strong>) lets you delete your account and personal data at any time. Deletion from inside the app is immediate.</p>
 
   <h2>1. Delete it in the app (fastest)</h2>
   <div class="card">
     <ol class="steps">
-      <li>Open Oye Buddy and sign in.</li>
+      <li>Open OyeBuddy and sign in.</li>
       <li>Go to <span class="path">You</span> → <span class="path">Settings</span> (gear icon).</li>
       <li>Scroll to the bottom and tap <span class="path">Delete account</span>, then confirm.</li>
     </ol>
@@ -20,14 +20,14 @@
   <div class="card">
     <p>Send a deletion request from the <strong>email address you signed up with</strong> (or your Google account’s email). We verify it’s you and delete the account within <strong>7 days</strong>, then confirm by email.</p>
     <form id="req" class="form" novalidate>
-      <label for="email">Email you used for Oye Buddy</label>
+      <label for="email">Email you used for OyeBuddy</label>
       <input id="email" type="email" required autocomplete="email" placeholder="you@example.com">
       <label for="name">Name on your profile (optional)</label>
       <input id="name" type="text" autocomplete="name">
       <label for="why">Anything we should know? (optional)</label>
       <textarea id="why" maxlength="500"></textarea>
       <button class="btn btn-coral" type="submit">Write deletion request email</button>
-      <p class="fine">This opens your email app with the request filled in; nothing is sent until you press Send. Or write to <a id="mail" href="#"></a> with the subject “Delete my Oye Buddy account”.</p>
+      <p class="fine">This opens your email app with the request filled in; nothing is sent until you press Send. Or write to <a id="mail" href="#"></a> with the subject “Delete my OyeBuddy account”.</p>
     </form>
   </div>
 
@@ -53,20 +53,20 @@
 
   const mailto = (to, subject, body = "") => `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   for (const a of [document.getElementById("mail"), ...document.querySelectorAll("a.support")]) {
-    a.textContent = SUPPORT_EMAIL; a.href = mailto(SUPPORT_EMAIL, "Delete my Oye Buddy account");
+    a.textContent = SUPPORT_EMAIL; a.href = mailto(SUPPORT_EMAIL, "Delete my OyeBuddy account");
   }
-  const g = document.getElementById("grievance"); g.textContent = GRIEVANCE_EMAIL; g.href = mailto(GRIEVANCE_EMAIL, "Oye Buddy grievance");
+  const g = document.getElementById("grievance"); g.textContent = GRIEVANCE_EMAIL; g.href = mailto(GRIEVANCE_EMAIL, "OyeBuddy grievance");
   document.getElementById("req").addEventListener("submit", (e) => {
     e.preventDefault();
     const email = document.getElementById("email");
     if (!email.value || !email.checkValidity()) { email.focus(); email.style.borderColor = "#d4565a"; return; }
     const body = [
-      "Please delete my Oye Buddy account and its data.", "",
+      "Please delete my OyeBuddy account and its data.", "",
       `Account email: ${email.value.trim()}`,
       `Profile name: ${document.getElementById("name").value.trim() || "-"}`,
       `Notes: ${document.getElementById("why").value.trim() || "-"}`, "",
       "I understand this cannot be undone.",
     ].join("\n");
-    window.location.href = mailto(SUPPORT_EMAIL, "Delete my Oye Buddy account", body);
+    window.location.href = mailto(SUPPORT_EMAIL, "Delete my OyeBuddy account", body);
   });
 </script>

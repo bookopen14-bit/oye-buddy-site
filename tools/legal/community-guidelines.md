@@ -1,6 +1,6 @@
 # Community Guidelines
 
-Oye Buddy is for meeting real people nearby, kindly and safely. These rules apply to profiles, photos, Buddy Feed posts and chats.
+OyeBuddy is for meeting real people nearby, kindly and safely. These rules apply to profiles, photos, Buddy Feed posts and chats.
 
 ## Be real
 

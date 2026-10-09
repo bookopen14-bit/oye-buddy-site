@@ -1,6 +1,6 @@
-# Oye Buddy website
+# OyeBuddy website
 
-Static marketing site for **Oye Buddy** (Oyeteck Innovations, Raipur). Plain HTML + CSS, no framework,
+Static marketing site for **OyeBuddy** (Oyeteck Innovations, Raipur). Plain HTML + CSS, no framework,
 no build step needed to serve it: every `.html` file in this folder is the final page.
 
 - Preview (GitHub Pages, `main` branch, root): https://bookopen14-bit.github.io/oye-buddy-site/

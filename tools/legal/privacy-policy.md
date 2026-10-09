@@ -2,11 +2,11 @@
 
 **Last updated:** 4 October 2026
 
-This Privacy Policy explains how **Oyeteck Innovations**, which operates Oye Buddy ("**Oye Buddy**", "**we**", "**us**"), collects and uses your personal data when you use the Oye Buddy app. We act as the **Data Fiduciary** under India's Digital Personal Data Protection Act, 2023 ("**DPDP Act**"). You are the **Data Principal**.
+This Privacy Policy explains how **Oyeteck Innovations**, which operates OyeBuddy ("**OyeBuddy**", "**we**", "**us**"), collects and uses your personal data when you use the OyeBuddy app. We act as the **Data Fiduciary** under India's Digital Personal Data Protection Act, 2023 ("**DPDP Act**"). You are the **Data Principal**.
 
-## 1. Who can use Oye Buddy
+## 1. Who can use OyeBuddy
 
-Oye Buddy is only for adults aged **18 to 80**. We do not knowingly collect personal data of anyone under 18. If we learn that a user is under 18, we delete the account and its data. If you believe a child is using Oye Buddy, write to support@oyebuddy.in.
+OyeBuddy is only for adults aged **18 to 80**. We do not knowingly collect personal data of anyone under 18. If we learn that a user is under 18, we delete the account and its data. If you believe a child is using OyeBuddy, write to support@oyebuddy.in.
 
 ## 2. Data we collect
 
@@ -102,7 +102,7 @@ We may update this policy. We will tell you in the app before material changes t
 
 ## 13. Contact
 
-**Oyeteck Innovations** (operator of Oye Buddy)
+**Oyeteck Innovations** (operator of OyeBuddy)
 Support: support@oyebuddy.in
 Company: contact@oyebuddy.in
 Address: Currency Tower, Raipur, Chhattisgarh 492001

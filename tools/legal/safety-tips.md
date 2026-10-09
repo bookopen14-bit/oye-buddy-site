@@ -1,6 +1,6 @@
 # Safety tips
 
-Most people on Oye Buddy are here to meet someone nice nearby. These habits keep it that way.
+Most people on OyeBuddy are here to meet someone nice nearby. These habits keep it that way.
 
 ## Before you meet
 

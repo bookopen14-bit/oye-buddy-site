@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Delete your Oye Buddy account</title>
-<meta name="description" content="How to delete your Oye Buddy account and data, in the app or by email, and what is deleted or kept.">
+<title>Delete your OyeBuddy account</title>
+<meta name="description" content="How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept.">
 <link rel="canonical" href="https://oyebuddy.in/delete-account.html">
 <meta name="theme-color" content="#070706">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Oye Buddy">
+<meta property="og:site_name" content="OyeBuddy">
 <meta property="og:locale" content="en_IN">
-<meta property="og:title" content="Delete your Oye Buddy account">
-<meta property="og:description" content="How to delete your Oye Buddy account and data, in the app or by email, and what is deleted or kept.">
+<meta property="og:title" content="Delete your OyeBuddy account">
+<meta property="og:description" content="How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept.">
 <meta property="og:url" content="https://oyebuddy.in/delete-account.html">
 <meta property="og:image" content="https://oyebuddy.in/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Oye Buddy: gold pin logo and app screens on black">
+<meta property="og:image:alt" content="OyeBuddy: gold pin logo and app screens on black">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Delete your Oye Buddy account">
-<meta name="twitter:description" content="How to delete your Oye Buddy account and data, in the app or by email, and what is deleted or kept.">
+<meta name="twitter:title" content="Delete your OyeBuddy account">
+<meta name="twitter:description" content="How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept.">
 <meta name="twitter:image" content="https://oyebuddy.in/assets/img/og.jpg">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -36,7 +36,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Oye Buddy home"><img src="assets/img/logo-mark-128.png" width="34" height="34" alt=""><span>Oye Buddy</span></a>
+    <a class="brand" href="index.html" aria-label="OyeBuddy home"><img src="assets/img/logo-mark-128.png" width="34" height="34" alt=""><span>OyeBuddy</span></a>
     <nav class="nav" aria-label="Main">
       <a href="index.html#features">Features</a>
       <a href="index.html#safety">Safety</a>
@@ -46,15 +46,15 @@
   </div>
 </header>
 <main id="main" class="doc">
-  <p class="eyebrow">Oye Buddy · Account &amp; data</p>
+  <p class="eyebrow">OyeBuddy · Account &amp; data</p>
   <h1>Delete your account</h1>
   <nav class="doc-nav" aria-label="Legal pages"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="community-guidelines.html">Community Guidelines</a><a href="safety-tips.html">Safety tips</a><a href="grievance.html">Grievance Officer</a><a href="delete-account.html" aria-current=page>Delete account</a></nav>
-  <p>Oye Buddy (Android app <strong>app.oyebuddy.mobile</strong>) lets you delete your account and personal data at any time. Deletion from inside the app is immediate.</p>
+  <p>OyeBuddy (Android app <strong>app.oyebuddy.mobile</strong>) lets you delete your account and personal data at any time. Deletion from inside the app is immediate.</p>
 
   <h2>1. Delete it in the app (fastest)</h2>
   <div class="card">
     <ol class="steps">
-      <li>Open Oye Buddy and sign in.</li>
+      <li>Open OyeBuddy and sign in.</li>
       <li>Go to <span class="path">You</span> → <span class="path">Settings</span> (gear icon).</li>
       <li>Scroll to the bottom and tap <span class="path">Delete account</span>, then confirm.</li>
     </ol>
@@ -65,14 +65,14 @@
   <div class="card">
     <p>Send a deletion request from the <strong>email address you signed up with</strong> (or your Google account’s email). We verify it’s you and delete the account within <strong>7 days</strong>, then confirm by email.</p>
     <form id="req" class="form" novalidate>
-      <label for="email">Email you used for Oye Buddy</label>
+      <label for="email">Email you used for OyeBuddy</label>
       <input id="email" type="email" required autocomplete="email" placeholder="you@example.com">
       <label for="name">Name on your profile (optional)</label>
       <input id="name" type="text" autocomplete="name">
       <label for="why">Anything we should know? (optional)</label>
       <textarea id="why" maxlength="500"></textarea>
       <button class="btn btn-coral" type="submit">Write deletion request email</button>
-      <p class="fine">This opens your email app with the request filled in; nothing is sent until you press Send. Or write to <a id="mail" href="#"></a> with the subject “Delete my Oye Buddy account”.</p>
+      <p class="fine">This opens your email app with the request filled in; nothing is sent until you press Send. Or write to <a id="mail" href="#"></a> with the subject “Delete my OyeBuddy account”.</p>
     </form>
   </div>
 
@@ -98,31 +98,31 @@
 
   const mailto = (to, subject, body = "") => `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   for (const a of [document.getElementById("mail"), ...document.querySelectorAll("a.support")]) {
-    a.textContent = SUPPORT_EMAIL; a.href = mailto(SUPPORT_EMAIL, "Delete my Oye Buddy account");
+    a.textContent = SUPPORT_EMAIL; a.href = mailto(SUPPORT_EMAIL, "Delete my OyeBuddy account");
   }
-  const g = document.getElementById("grievance"); g.textContent = GRIEVANCE_EMAIL; g.href = mailto(GRIEVANCE_EMAIL, "Oye Buddy grievance");
+  const g = document.getElementById("grievance"); g.textContent = GRIEVANCE_EMAIL; g.href = mailto(GRIEVANCE_EMAIL, "OyeBuddy grievance");
   document.getElementById("req").addEventListener("submit", (e) => {
     e.preventDefault();
     const email = document.getElementById("email");
     if (!email.value || !email.checkValidity()) { email.focus(); email.style.borderColor = "#d4565a"; return; }
     const body = [
-      "Please delete my Oye Buddy account and its data.", "",
+      "Please delete my OyeBuddy account and its data.", "",
       `Account email: ${email.value.trim()}`,
       `Profile name: ${document.getElementById("name").value.trim() || "-"}`,
       `Notes: ${document.getElementById("why").value.trim() || "-"}`, "",
       "I understand this cannot be undone.",
     ].join("\n");
-    window.location.href = mailto(SUPPORT_EMAIL, "Delete my Oye Buddy account", body);
+    window.location.href = mailto(SUPPORT_EMAIL, "Delete my OyeBuddy account", body);
   });
 </script>
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="index.html" aria-label="Oye Buddy home"><img src="assets/img/logo-mark-128.png" width="34" height="34" alt=""><span>Oye Buddy</span></a>
+        <a class="brand" href="index.html" aria-label="OyeBuddy home"><img src="assets/img/logo-mark-128.png" width="34" height="34" alt=""><span>OyeBuddy</span></a>
         <p class="muted" style="max-width:30em;margin:16px 0 0">Meet real people nearby. Local, live, unplanned. Strictly 18+.</p>
         <address style="margin-top:16px">
-          Oye Buddy is operated by <strong style="color:var(--fg);font-weight:500">Oyeteck Innovations</strong><br>
+          OyeBuddy is operated by <strong style="color:var(--fg);font-weight:500">Oyeteck Innovations</strong><br>
           Currency Tower, Raipur, Chhattisgarh 492001, India
         </address>
       </div>
@@ -148,7 +148,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Oyeteck Innovations. Made in India.</span>
-      <span>Oye Buddy is for adults 18+ only. Google Play is a trademark of Google LLC.</span>
+      <span>OyeBuddy is for adults 18+ only. Google Play is a trademark of Google LLC.</span>
     </div>
   </div>
 </footer>
