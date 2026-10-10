@@ -30,7 +30,7 @@ DOC_NAV = [(o, l) for _, o, l, _ in LEGAL] + [("delete-account.html", "Delete ac
 PIN = '<img src="assets/img/logo-mark-128.png" width="34" height="34" alt="">'
 
 def head(title, desc, path, extra=""):
-    url = f"{BASE_URL}/{'' if path == 'index.html' else path}"
+    url = f"{BASE_URL}/{'' if path == 'index.html' else path[:-5]}"
     return f"""<!doctype html>
 <html lang="en-IN">
 <head>
@@ -39,6 +39,7 @@ def head(title, desc, path, extra=""):
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
+<script>if(/\\.github\\.io$/.test(location.hostname)){{location.replace("{BASE_URL}"+location.pathname.replace(/^\\/oye-buddy-site/,"")+location.search+location.hash)}}</script>
 <meta name="theme-color" content="#070706">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -75,9 +76,10 @@ def header(home=False):
     <a class="brand" href="{p or '#top'}" aria-label="OyeBuddy home">{PIN}<span>OyeBuddy</span></a>
     <nav class="nav" aria-label="Main">
       <a href="{p}#features">Features</a>
-      <a href="{p}#safety">Safety</a>
-      <a href="{p}#faq">FAQ</a>
-      <a class="btn btn-gold btn-sm" href="{p}#waitlist">Join the beta</a>
+      <a href="safety-tips.html">Safety</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a class="btn btn-gold btn-sm" href="beta.html">Get the beta</a>
     </nav>
   </div>
 </header>
@@ -95,12 +97,20 @@ FOOTER = f"""<footer class="site-footer">
         </address>
       </div>
       <div>
+        <h4>OyeBuddy</h4>
+        <ul>
+          <li><a href="about.html">About OyeBuddy</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="beta.html">Get the Android beta</a></li>
+          <li><a href="safety-tips.html">Safety tips</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Legal</h4>
         <ul>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
           <li><a href="community-guidelines.html">Community Guidelines</a></li>
-          <li><a href="safety-tips.html">Safety tips</a></li>
           <li><a href="delete-account.html">Delete account</a></li>
           <li><a href="grievance.html">Grievance Officer</a></li>
         </ul>
@@ -132,6 +142,12 @@ def linkify(s):
     s = re.sub(r"\*\*(112|181|1930)\*\*", r'<strong><a href="tel:\1">\1</a></strong>', s)
     return s
 
+def clean(html_text):
+    """Cloudflare Pages serves /page and 308-redirects /page.html, so link to the clean URL."""
+    html_text = re.sub(r'href="index\.html(#[^"]*)?"', lambda m: 'href="/' + (m.group(1) or '') + '"', html_text)
+    html_text = re.sub(r'href="(?!404)([a-z][a-z-]*)\.html(#[^"]*)?"', lambda m: f'href="/{m.group(1)}{m.group(2) or ""}"', html_text)
+    return html_text.replace('/#', '/#')
+
 def build_legal():
     for md, out, label, desc in LEGAL:
         src = (TOOLS / "legal" / md).read_text()
@@ -143,14 +159,16 @@ def build_legal():
         body = re.sub(r"<p><strong>Last updated:</strong>(.*?)</p>", r'<p class="updated">Last updated:\1</p>', body)
         page = (head(f"{title} | OyeBuddy", desc, out) + header() +
                 f'<main id="main" class="doc">\n<p class="eyebrow">OyeBuddy · Legal</p>\n<h1>{title}</h1>\n{doc_nav(out)}\n{body}\n</main>\n' + FOOTER + "</body>\n</html>\n")
-        (ROOT / out).write_text(page)
+        (ROOT / out).write_text(clean(page))
         print("wrote", out)
 
 def build_pages():
     for name, title, desc in [
-        ("index.html", "OyeBuddy: meet real people nearby | Indian dating app", "OyeBuddy is a premium Indian dating app for meeting real people nearby. Discover, Buddy Feed, an area map that never shows exact locations, selfie-verified badges and strong safety tools. Coming soon on Google Play: join the beta."),
+        ("index.html", "OyeBuddy: Dating App in India to Meet & Make Friends Nearby | Raipur", "OyeBuddy is an Indian dating and friends app, starting in Raipur. Meet real people nearby, post a quick plan, chat after you both like. 18+ only, exact location never shown."),
+        ("about.html", "About OyeBuddy | Dating & Friends App Made in Raipur, India", "OyeBuddy is made by Oyeteck Innovations in Raipur, Chhattisgarh. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
+        ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: how to download the Android beta, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
         ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
-        ("beta.html", "Get the OyeBuddy beta | Closed beta in Raipur", "Invite-only Android beta of OyeBuddy for Raipur. Enter your invite code to download."),
+        ("beta.html", "Download OyeBuddy Android Beta | Dating App for Raipur", "Download the OyeBuddy Android beta. Meet real people nearby in Raipur, 18+ only. Free during the beta."),
         ("404.html", "Page not found | OyeBuddy", "This page does not exist. Go back to OyeBuddy."),
     ]:
         src = (TOOLS / "pages" / name).read_text()
@@ -158,14 +176,14 @@ def build_pages():
         if name == "delete-account.html":
             body = body.replace("<!--DOCNAV-->", doc_nav(name))
         page = head(title, desc, name, extra.strip() + "\n" if extra.strip() else "") + header(home=name == "index.html") + body.strip() + "\n" + FOOTER + "</body>\n</html>\n"
-        if name in ("404.html", "beta.html"):
+        if name == "404.html":
             page = page.replace('<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">')
-        (ROOT / name).write_text(page)
+        (ROOT / name).write_text(clean(page))
         print("wrote", name)
 
 def build_sitemap():
-    urls = ["", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
-    items = "".join(f"  <url><loc>{BASE_URL}/{u}</loc><lastmod>2026-10-04</lastmod></url>\n" for u in urls)
+    urls = ["", "about.html", "faq.html", "beta.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
+    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-10</lastmod></url>\n" for u in urls)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n')
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
     print("wrote sitemap.xml, robots.txt")

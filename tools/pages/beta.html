@@ -1,46 +1,15 @@
-<link rel="canonical" href="https://oyebuddy.in/beta.html">
 <!--BODY-->
 <main id="main" class="doc" style="max-width:640px;padding-top:80px;padding-bottom:120px">
-  <p class="eyebrow">Closed beta · Raipur</p>
-  <h1>Get the OyeBuddy beta</h1>
-  <p class="lead">OyeBuddy is invite-only while we open in Raipur. Enter your invite code to unlock the Android download.</p>
-  <form class="form" id="beta-form" novalidate style="margin-top:22px">
-    <label>Invite code<input id="bc" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="24" placeholder="OYE-XXXXXXXX"></label>
-    <p class="err" id="bc-err" role="alert"></p>
-    <button class="btn btn-gold" type="submit" id="bc-btn">Unlock download</button>
-    <p class="fine">No code? <a href="index.html#waitlist">Join the waitlist</a>, or ask a friend who is already in: every member has 3 invites.</p>
-  </form>
-  <section id="unlocked" hidden style="margin-top:28px">
-    <p class="eyebrow">Unlocked</p>
-    <h2 class="display" style="font-size:34px">Welcome, Founding Member.</h2>
+  <p class="eyebrow">Open beta · Raipur first</p>
+  <h1>Get the OyeBuddy Android beta</h1>
+  <p class="lead">OyeBuddy is a dating and friends app for meeting real people nearby. The beta is open, free, Android only, and strictly 18+.</p>
+  <section id="download" style="margin-top:22px">
     <p><a class="btn btn-gold" id="apk" href="https://expo.dev/artifacts/eas/dyHAPZFPUaMHk04n3byE3u5vR_ssKuijnh9S785PNQA.apk" rel="noopener">Download for Android (APK)</a></p>
     <ol class="steps" style="color:var(--muted);line-height:1.8;padding-left:1.2em">
       <li>Open the downloaded file. If Android asks, allow installs from your browser (Settings, Install unknown apps).</li>
-      <li>Open OyeBuddy and sign up with email or Google.</li>
-      <li>Enter the same invite code when the app asks for it.</li>
+      <li>Open OyeBuddy and sign up with email or Google. No invite code is needed.</li>
       <li>Add at least one photo, then say oye!</li>
     </ol>
-    <p class="fine">Beta build: you may see rough edges. Tell us about them in the app (You, then Send feedback). Android only for now. Strictly 18+.</p>
+    <p class="fine">Beta build: you may see rough edges. Tell us about them in the app (You, then Send feedback). Please read the <a href="safety-tips.html">Safety tips</a> and <a href="privacy.html">Privacy Policy</a>. A Google Play release is planned; <a href="index.html#waitlist">join the waitlist</a> to hear when it is ready.</p>
   </section>
 </main>
-<script>
-  // Gate: asks Supabase (public.check_beta_code) whether the code is valid. The download link is only a public build file; the code just keeps the beta closed.
-  (function () {
-    var API = "https://iioxtfycaholzvcemrop.supabase.co", KEY = "sb_publishable_3Brt2Q6hcWyHDP0rsYTqEg_QSZBgeIN";
-    var f = document.getElementById("beta-form"), err = document.getElementById("bc-err"), btn = document.getElementById("bc-btn");
-    f.addEventListener("submit", function (e) {
-      e.preventDefault(); err.textContent = "";
-      var code = document.getElementById("bc").value.trim();
-      if (code.length < 4) { err.textContent = "Enter your invite code."; return; }
-      btn.disabled = true; btn.textContent = "Checking...";
-      fetch(API + "/rest/v1/rpc/check_beta_code", { method: "POST", headers: { "apikey": KEY, "Authorization": "Bearer " + KEY, "Content-Type": "application/json" }, body: JSON.stringify({ p_code: code }) })
-        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
-        .then(function (ok) {
-          if (ok === true) { document.getElementById("unlocked").hidden = false; f.hidden = true; document.getElementById("unlocked").scrollIntoView({ behavior: "smooth" }); }
-          else err.textContent = "That code isn't valid. Check it and try again.";
-        })
-        .catch(function () { err.textContent = "Couldn't check the code. Please try again."; })
-        .then(function () { btn.disabled = false; btn.textContent = "Unlock download"; });
-    });
-  })();
-</script>

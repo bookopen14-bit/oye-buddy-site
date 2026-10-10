@@ -1,8 +1,9 @@
 <link rel="preload" href="assets/img/hero-bg.webp" as="image" type="image/webp">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"#org","name":"Oyeteck Innovations","brand":{"@type":"Brand","name":"OyeBuddy"},"email":"support@oyebuddy.in","logo":"https://oyebuddy.in/icon-512.png","address":{"@type":"PostalAddress","streetAddress":"Currency Tower","addressLocality":"Raipur","addressRegion":"Chhattisgarh","postalCode":"492001","addressCountry":"IN"}},
-{"@type":"MobileApplication","name":"OyeBuddy","operatingSystem":"Android","applicationCategory":"LifestyleApplication","description":"Dating app for meeting real people nearby in India.","contentRating":"18+","publisher":{"@id":"#org"}}
+{"@type":"Organization","@id":"https://oyebuddy.in/#org","name":"Oyeteck Innovations","url":"https://oyebuddy.in/","brand":{"@type":"Brand","name":"OyeBuddy"},"email":"support@oyebuddy.in","logo":"https://oyebuddy.in/icon-512.png","address":{"@type":"PostalAddress","streetAddress":"Currency Tower","addressLocality":"Raipur","addressRegion":"Chhattisgarh","postalCode":"492001","addressCountry":"IN"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@oyebuddy.in","areaServed":"IN","availableLanguage":["en","hi"]}},
+{"@type":"WebSite","@id":"https://oyebuddy.in/#website","url":"https://oyebuddy.in/","name":"OyeBuddy","alternateName":"Oye Buddy","description":"Dating and friends app for meeting real people nearby in India, starting in Raipur.","inLanguage":"en-IN","publisher":{"@id":"https://oyebuddy.in/#org"}},
+{"@type":"MobileApplication","@id":"https://oyebuddy.in/#app","name":"OyeBuddy","operatingSystem":"Android","applicationCategory":"SocialNetworkingApplication","description":"Meet real people nearby in Raipur, India. Post a quick plan, chat after you both like. 18+ only; exact location is never shown.","url":"https://oyebuddy.in/","downloadUrl":"https://oyebuddy.in/beta","contentRating":"Adults 18+","inLanguage":"en-IN","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@id":"https://oyebuddy.in/#org"},"image":"https://oyebuddy.in/assets/img/og.jpg"}
 ]}
 </script>
 <!--BODY-->
@@ -24,8 +25,8 @@
       <p class="hero-note"><span class="chip chip-18">18+ only</span><span class="chip">Android first · Made in India</span></p>
     </div>
     <div class="hero-phones" aria-hidden="true">
-      <div class="phone p2"><img src="assets/shots/buddy-feed.webp" width="600" height="1298" alt="" fetchpriority="low"></div>
-      <div class="phone p1"><img src="assets/shots/discover.webp" width="600" height="1298" alt="" fetchpriority="high"></div>
+      <div class="phone p2"><img src="assets/shots/buddy-feed.webp" width="600" height="1298" alt="OyeBuddy Buddy Feed: short plans from people nearby" fetchpriority="low"></div>
+      <div class="phone p1"><img src="assets/shots/discover.webp" width="600" height="1298" alt="OyeBuddy Discover: a profile card with distance in kilometres" fetchpriority="high"></div>
       <img class="hero-mark" src="assets/img/logo-mark.png" width="256" height="256" alt="">
     </div>
   </div>
@@ -215,7 +216,7 @@
       <h2 class="display" id="faq-title">Questions, answered</h2>
     </div>
     <div class="faq">
-      <details><summary>When can I download OyeBuddy?</summary><p>OyeBuddy is coming soon to Google Play for Android. Join the beta waitlist above and we'll email you as soon as you can install it.</p></details>
+      <details><summary>When can I download OyeBuddy?</summary><p>The OyeBuddy Android beta is open now: download it from <a href="beta.html">oyebuddy.in/beta</a>. A Google Play release is planned; join the waitlist above and we will email you.</p></details>
       <details><summary>Is OyeBuddy free?</summary><p>Yes. Everyone gets a daily number of free likes, Buddy Feed hearts and replies, reset at midnight IST. Optional plans unlock extras like unlimited likes and seeing who liked you. Plans and prices are the same for everyone, and the full terms are shown in the app before any payment.</p></details>
       <details><summary>Can people see my exact location?</summary><p>No. Your location is stored rounded to about 1 km, and other people only see an approximate distance. The Nearby map shows activity by area, never individual pins. If you share a pin in a chat, it is rounded to about 100 m.</p></details>
       <details><summary>How does selfie verification work?</summary><p>It's optional. You take one live selfie in a random pose with your front camera. A trained member of our safety team compares it with your profile photos. We don't use automated face recognition or create a face template. The selfie is deleted 30 days after the decision, or right away if you withdraw or delete your account.</p></details>
@@ -254,13 +255,4 @@
         .then(function () { btn.disabled = false; btn.textContent = "Join the beta waitlist"; });
     });
   })();
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"When can I download OyeBuddy?","acceptedAnswer":{"@type":"Answer","text":"OyeBuddy is coming soon to Google Play for Android. Join the beta waitlist and we'll email you as soon as you can install it."}},
-{"@type":"Question","name":"Is OyeBuddy free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Everyone gets a daily number of free likes, Buddy Feed hearts and replies, reset at midnight IST. Optional plans unlock extras. Full terms are shown in the app before any payment."}},
-{"@type":"Question","name":"Can people see my exact location?","acceptedAnswer":{"@type":"Answer","text":"No. Your location is stored rounded to about 1 km and other people only see an approximate distance. The Nearby map shows activity by area, never individual pins."}},
-{"@type":"Question","name":"How does selfie verification work?","acceptedAnswer":{"@type":"Answer","text":"It's optional. You take one live selfie in a random pose. A trained member of our safety team compares it with your profile photos. No automated face recognition. The selfie is deleted 30 days after the decision."}},
-{"@type":"Question","name":"How do I delete my account?","acceptedAnswer":{"@type":"Answer","text":"In the app, go to You, Settings, Delete account. Deletion is immediate. You can also request deletion by email."}}
-]}
 </script>

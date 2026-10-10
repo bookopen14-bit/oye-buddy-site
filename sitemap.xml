@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://oyebuddy.in/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://oyebuddy.in/delete-account.html</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://oyebuddy.in/privacy.html</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://oyebuddy.in/terms.html</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://oyebuddy.in/community-guidelines.html</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://oyebuddy.in/safety-tips.html</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://oyebuddy.in/grievance.html</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://oyebuddy.in/</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/about</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/faq</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/beta</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/delete-account</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/privacy</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/terms</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/community-guidelines</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/safety-tips</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://oyebuddy.in/grievance</loc><lastmod>2026-10-10</lastmod></url>
 </urlset>
