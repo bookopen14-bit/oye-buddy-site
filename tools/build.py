@@ -10,6 +10,7 @@ served as they are. Run this only after editing a source file:
 Legal sources are copies of docs/legal/*.md from the app repo (keep them in sync).
 To move to the custom domain, change BASE_URL below, re-run, and commit.
 """
+import hashlib
 import html, pathlib, re, markdown
 
 BASE_URL = "https://oyebuddy.in"
@@ -125,7 +126,14 @@ def linkify(s):
     s = re.sub(r"\*\*(112|181|1930)\*\*", r'<strong><a href="tel:\1">\1</a></strong>', s)
     return s
 
+def _bust(m):
+    f = ROOT / m.group(1)
+    v = hashlib.md5(f.read_bytes()).hexdigest()[:8] if f.exists() else "0"
+    return f'{m.group(1)}?v={v}'
+
 def clean(html_text):
+    html_text = re.sub(r'(?<![/\w])(assets/(?:css|js|shots|img)/[\w.-]+\.(?:css|js|webp|png|jpg))(?!\?)', _bust, html_text)
+    html_text = re.sub(r'(<body[^>]*>)', r'\1<!--email_off-->', html_text, count=1).replace('</body>', '<!--/email_off--></body>')
     """Cloudflare Pages serves /page and 308-redirects /page.html, so link to the clean URL."""
     html_text = re.sub(r'href="index\.html(#[^"]*)?"', lambda m: 'href="/' + (m.group(1) or '') + '"', html_text)
     html_text = re.sub(r'href="(?!404)([a-z][a-z-]*)\.html(#[^"]*)?"', lambda m: f'href="/{m.group(1)}{m.group(2) or ""}"', html_text)
