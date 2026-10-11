@@ -64,6 +64,8 @@ def head(title, desc, path, extra=""):
 <link rel="preload" href="assets/fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.className="js"</script>
+<script defer src="assets/js/site.js"></script>
 {extra}</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -87,46 +89,27 @@ def header(home=False):
 
 FOOTER = f"""<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
+    <div class="foot-top">
+      <div class="foot-brand">
         <a class="brand" href="index.html" aria-label="OyeBuddy home">{PIN}<span>OyeBuddy</span></a>
-        <p class="muted" style="max-width:30em;margin:16px 0 0">Meet real people nearby. Local, live, unplanned. Strictly 18+.</p>
-        <address style="margin-top:16px">
-          OyeBuddy is operated by <strong style="color:var(--fg);font-weight:500">Oyeteck Innovations</strong><br>
-          Currency Tower, Raipur, Chhattisgarh 492001, India
-        </address>
+        <p>Meet real people nearby. Raipur first.</p>
+        <p><a href="mailto:{SUPPORT}">{SUPPORT}</a></p>
       </div>
-      <div>
-        <h4>OyeBuddy</h4>
-        <ul>
-          <li><a href="about.html">About OyeBuddy</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="beta.html">Get the Android beta</a></li>
-          <li><a href="safety-tips.html">Safety tips</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="community-guidelines.html">Community Guidelines</a></li>
-          <li><a href="delete-account.html">Delete account</a></li>
-          <li><a href="grievance.html">Grievance Officer</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>Support<br><a href="mailto:{SUPPORT}">{SUPPORT}</a></li>
-          <li>Grievance Officer: <a href="mailto:{GRIEVANCE}">{GRIEVANCE}</a></li>
-          <li>Emergency in India: <a href="tel:112">112</a></li>
-        </ul>
-      </div>
+      <ul class="foot-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="safety-tips.html">Safety</a></li>
+        <li><a href="community-guidelines.html">Community Guidelines</a></li>
+        <li><a href="beta.html">Get the beta</a></li>
+        <li><a href="grievance.html">Grievance Officer</a></li>
+        <li><a href="delete-account.html">Delete account</a></li>
+      </ul>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Oyeteck Innovations. Made in India.</span>
-      <span>OyeBuddy is for adults 18+ only. Google Play is a trademark of Google LLC.</span>
+      <span>© 2026 OyeBuddy. Made in India.</span>
+      <span>For adults 18+ only.</span>
     </div>
   </div>
 </footer>
