@@ -165,7 +165,7 @@ def build_pages():
         print("wrote", name)
 
 def build_sitemap():
-    urls = ["", "about.html", "faq.html", "beta.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
+    urls = ["", "about.html", "faq.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
     items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-10</lastmod></url>\n" for u in urls)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n')
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
