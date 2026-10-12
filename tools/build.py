@@ -93,7 +93,7 @@ FOOTER = f"""<footer class="site-footer">
     <div class="foot-top">
       <div class="foot-brand">
         <a class="brand" href="index.html" aria-label="OyeBuddy home">{PIN}<span>OyeBuddy</span></a>
-        <p>Meet real people nearby. Raipur first.</p>
+        <p>Meet real people nearby.</p>
         <p><a href="mailto:{SUPPORT}">{SUPPORT}</a></p>
       </div>
       <ul class="foot-links">
