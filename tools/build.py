@@ -44,7 +44,7 @@ def head(title, desc, path, extra=""):
 <meta name="theme-color" content="#070706">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
-{'<meta name="keywords" content="OyeBuddy, Oye Buddy, OyeBuddy app, dating app Raipur, Raipur dating app, Chhattisgarh dating app, cafe plans, movie plans, travel plans, meetup plans">'+chr(10) if path == 'index.html' else ''}<meta property="og:type" content="website">
+{'<meta name="keywords" content="OyeBuddy, Oye Buddy, OyeBuddy app, dating app, social app, dating and social app India, cafe plans, movie plans, travel plans, meetup plans">'+chr(10) if path == 'index.html' else ''}<meta property="og:type" content="website">
 <meta property="og:site_name" content="OyeBuddy">
 <meta property="og:locale" content="en_IN">
 <meta property="og:title" content="{html.escape(title)}">
@@ -155,7 +155,7 @@ def build_legal():
 
 def build_pages():
     for name, title, desc in [
-        ("index.html", "OyeBuddy – Dating App in Raipur | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating app in Raipur, Chhattisgarh. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Free Android beta."),
+        ("index.html", "OyeBuddy – Dating & Social App | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating & social app in India. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Free Android beta."),
         ("about.html", "About OyeBuddy | Dating & Friends App Made in Raipur, India", "OyeBuddy is made by Oyeteck Innovations in Raipur, Chhattisgarh. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
         ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: how to download the Android beta, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
         ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
