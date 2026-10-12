@@ -156,10 +156,10 @@ def build_legal():
 def build_pages():
     for name, title, desc in [
         ("index.html", "OyeBuddy – Dating & Social App | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating & social app in India. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Free Android beta."),
-        ("about.html", "About OyeBuddy | Dating & Friends App Made in Raipur, India", "OyeBuddy is made by Oyeteck Innovations in Raipur, Chhattisgarh. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
+        ("about.html", "About OyeBuddy | Dating & Social App Made in India", "OyeBuddy is a dating & social app made in India by Oyeteck Innovations. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
         ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: how to download the Android beta, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
         ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
-        ("beta.html", "Download OyeBuddy Android Beta | Dating App for Raipur", "Download the OyeBuddy Android beta. Meet real people nearby in Raipur, 18+ only. Free during the beta."),
+        ("beta.html", "Download OyeBuddy Android Beta | Dating & Social App", "Download the OyeBuddy Android beta. Meet real people nearby and make plans, 18+ only. Free during the beta."),
         ("404.html", "Page not found | OyeBuddy", "This page does not exist. Go back to OyeBuddy."),
     ]:
         src = (TOOLS / "pages" / name).read_text()
