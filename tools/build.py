@@ -44,7 +44,7 @@ def head(title, desc, path, extra=""):
 <meta name="theme-color" content="#070706">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:type" content="website">
+{'<meta name="keywords" content="OyeBuddy, Oye Buddy, OyeBuddy app, dating app Raipur, Raipur dating app, Chhattisgarh dating app, cafe plans, movie plans, travel plans, meetup plans">'+chr(10) if path == 'index.html' else ''}<meta property="og:type" content="website">
 <meta property="og:site_name" content="OyeBuddy">
 <meta property="og:locale" content="en_IN">
 <meta property="og:title" content="{html.escape(title)}">
@@ -155,7 +155,7 @@ def build_legal():
 
 def build_pages():
     for name, title, desc in [
-        ("index.html", "OyeBuddy: Dating App in India to Meet & Make Friends Nearby | Raipur", "OyeBuddy is an Indian dating and friends app, starting in Raipur. Meet real people nearby, post a quick plan, chat after you both like. 18+ only, exact location never shown."),
+        ("index.html", "OyeBuddy – Dating App in Raipur | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating app in Raipur, Chhattisgarh. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Free Android beta."),
         ("about.html", "About OyeBuddy | Dating & Friends App Made in Raipur, India", "OyeBuddy is made by Oyeteck Innovations in Raipur, Chhattisgarh. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
         ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: how to download the Android beta, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
         ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
@@ -169,12 +169,13 @@ def build_pages():
         page = head(title, desc, name, extra.strip() + "\n" if extra.strip() else "") + header(home=name == "index.html") + body.strip() + "\n" + FOOTER + "</body>\n</html>\n"
         if name == "404.html":
             page = page.replace('<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">')
+            page = page.replace(f'<link rel="canonical" href="{BASE_URL}/404">\n', '')
         (ROOT / name).write_text(clean(page))
         print("wrote", name)
 
 def build_sitemap():
-    urls = ["", "about.html", "faq.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
-    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-10</lastmod></url>\n" for u in urls)
+    urls = ["", "about.html", "faq.html", "beta.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
+    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-12</lastmod></url>\n" for u in urls)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n')
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
     print("wrote sitemap.xml, robots.txt")
