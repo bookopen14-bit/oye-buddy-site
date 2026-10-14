@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** 4 October 2026
+**Last updated:** 14 October 2026
 
 These Terms are an agreement between you and **Oyeteck Innovations**, which operates OyeBuddy ("**OyeBuddy**", "**we**", "**us**"). By creating an account you accept these Terms, our Privacy Policy and our Community Guidelines.
 
@@ -40,7 +40,7 @@ We are not responsible for the conduct of users on or off the app. **Meet in pub
 
 ## 7. Subscriptions and payments
 
-- The free tier is the same for everyone: a daily number of likes, Buddy Feed hearts and Buddy Feed replies, which resets at midnight India time (IST). Paid plans unlock features such as unlimited likes, hearts and replies, seeing who liked you, messaging without a match, Rewind and Replay discover. Plans and prices are the same for everyone. Prices are shown in Indian rupees, inclusive of applicable taxes unless stated.
+- The free tier is the same for everyone: a daily number of chat messages, likes, Buddy Feed likes and Buddy Feed replies, which resets at midnight India time (IST). Paid plans unlock features such as unlimited likes, hearts and replies, seeing who liked you, messaging without a match, Rewind and Replay discover. Plans and prices are the same for everyone. Prices are shown in Indian rupees, inclusive of applicable taxes unless stated.
 - Online payments are not available yet. Before any payment is taken, we will show the price, billing period, renewal, cancellation and refund terms in the app, and you will confirm them before you pay.
 - Nothing in these Terms affects your rights under the Consumer Protection Act, 2019.
 - Until payments launch, plans may be enabled by the OyeBuddy team at no charge; they can be withdrawn at any time.
