@@ -16,13 +16,13 @@ Any account involved in CSAE is permanently removed, and we report it to the aut
 
 ## Strictly 18+
 
-- OyeBuddy is only for adults aged 18 or over. Every user must confirm their date of birth at an age gate during signup, and anyone under 18 cannot create an account.
+- OyeBuddy is only for adults aged 18 or over. At signup, users must confirm they are 18 or older, and the age they enter must be 18+. Anyone under 18 cannot create an account.
 - If we find, or are told, that an account belongs to someone under 18, we remove the account and delete their data.
-- Uploaded photos are screened automatically, and anything flagged is hidden until our team reviews it.
+- Photos and profiles are reviewed by our moderation team when reported.
 
 ## Reporting and blocking in the app
 
-- Tap **Report** on any profile or in any chat to report a user. Choose the underage or child safety reason for anything involving a minor. Reports are confidential.
+- Tap **Report** on any profile or in any chat to report a user. Choose the **Underage** reason for anything involving a minor. Reports are confidential.
 - Tap **Block** to stop all contact with someone immediately.
 
 ## Review and removal
