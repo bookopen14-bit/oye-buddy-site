@@ -24,6 +24,7 @@ LEGAL = [  # (md file, output, nav label, meta description)
     ("terms-of-service.md", "terms.html", "Terms", "The Terms of Service for OyeBuddy, the Indian dating app for meeting real people nearby."),
     ("community-guidelines.md", "community-guidelines.html", "Community Guidelines", "The rules that keep OyeBuddy kind, real and safe: be real, be respectful, no scams, report and block."),
     ("safety-tips.md", "safety-tips.html", "Safety tips", "Simple habits for meeting someone from OyeBuddy safely, plus India emergency helplines."),
+    ("child-safety.md", "child-safety.html", "Child Safety", "OyeBuddy child safety standards (CSAE policy): zero tolerance for child sexual abuse and CSAM, strictly 18+, in-app reporting, and reporting to NCMEC and Indian authorities."),
     ("grievance-officer.md", "grievance.html", "Grievance Officer", "Contact the OyeBuddy Grievance Officer under the IT Rules 2021 and DPDP Act 2023. Acknowledged within 24 hours, resolved within 15 days."),
 ]
 DOC_NAV = [(o, l) for _, o, l, _ in LEGAL] + [("delete-account.html", "Delete account")]
@@ -105,6 +106,7 @@ FOOTER = f"""<footer class="site-footer">
         <li><a href="community-guidelines.html">Community Guidelines</a></li>
         <li><a href="beta.html">Get the beta</a></li>
         <li><a href="grievance.html">Grievance Officer</a></li>
+        <li><a href="child-safety.html">Child Safety</a></li>
         <li><a href="delete-account.html">Delete account</a></li>
       </ul>
     </div>
@@ -148,7 +150,7 @@ def build_legal():
         title = title_m.group(1)
         body = body.replace(title_m.group(0), "", 1)
         body = re.sub(r"<p><strong>Last updated:</strong>(.*?)</p>", r'<p class="updated">Last updated:\1</p>', body)
-        page = (head(f"{title} | OyeBuddy", desc, out) + header() +
+        page = (head(f"{title} – OyeBuddy" if out == "child-safety.html" else f"{title} | OyeBuddy", desc, out) + header() +
                 f'<main id="main" class="doc">\n<p class="eyebrow">OyeBuddy · Legal</p>\n<h1>{title}</h1>\n{doc_nav(out)}\n{body}\n</main>\n' + FOOTER + "</body>\n</html>\n")
         (ROOT / out).write_text(clean(page))
         print("wrote", out)
@@ -175,7 +177,7 @@ def build_pages():
 
 def build_sitemap():
     urls = ["", "about.html", "faq.html", "beta.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
-    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-12</lastmod></url>\n" for u in urls)
+    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-14</lastmod></url>\n" for u in urls)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n')
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
     print("wrote sitemap.xml, robots.txt")

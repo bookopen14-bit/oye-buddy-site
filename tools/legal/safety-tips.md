@@ -24,3 +24,7 @@ Most people on OyeBuddy are here to meet someone nice nearby. These habits keep 
 ## In an emergency
 
 Call **112** (India emergency number). Women can also call the **181** women helpline. For cyber crime, call **1930** or visit cybercrime.gov.in.
+
+## Child safety
+
+OyeBuddy is strictly 18+ and has zero tolerance for child sexual abuse and exploitation. Read our [Child Safety Standards](child-safety.html).
