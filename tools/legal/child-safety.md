@@ -16,7 +16,7 @@ Any account involved in CSAE is permanently removed, and we report it to the aut
 
 ## Strictly 18+
 
-- OyeBuddy is only for adults aged 18 or over. At signup, users must confirm they are 18 or older, and the age they enter must be 18+. Anyone under 18 cannot create an account.
+- OyeBuddy is only for adults aged 18 or over. At signup, every user must enter their date of birth. We calculate their age from it, in the app and again on our servers, and block anyone under 18: an account cannot be completed with a date of birth under 18. We store the date of birth only for this age check and show other users only the age, never the birthday.
 - If we find, or are told, that an account belongs to someone under 18, we remove the account and delete their data.
 - Photos and profiles are reviewed by our moderation team when reported.
 
