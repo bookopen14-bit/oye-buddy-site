@@ -11,7 +11,7 @@ OyeBuddy is only for adults aged **18 to 80**. We do not knowingly collect perso
 ## 2. Data we collect
 
 - **Account data:** email address, password (stored only as a secure hash by our authentication provider), and, if you use Google sign-in, your Google account email and name.
-- **Waitlist and invite data:** if you join the waitlist on oyebuddy.in we store the name, email, phone (optional) and city you enter, only to invite you to the beta. If you use an invite code, we record which code you used. Feedback you send from the app is stored with your account.
+- **Waitlist data:** if you join the waitlist on oyebuddy.in we store the name, email, phone (optional) and city you enter, only to tell you when OyeBuddy is available. If you used an invite code in the past, we keep a record of which code you used. Feedback you send from the app is stored with your account.
 - **Date of birth:** asked at signup to confirm you are 18 or over. We show others only your age, never your date of birth.
 - **Profile data you choose to share:** name, age, gender, photos, bio, job, interests, what you are looking for, city.
 - **Location:** your device location, when you allow it. We store it **rounded to roughly 1 km** and never show your exact location to anyone. Other people only see an approximate distance. If you share a pin in chat, it is rounded to about 100 m.

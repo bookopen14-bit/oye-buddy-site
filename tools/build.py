@@ -83,7 +83,7 @@ def header(home=False):
       <a href="safety-tips.html">Safety</a>
       <a href="about.html">About</a>
       <a href="faq.html">FAQ</a>
-      <a class="btn btn-gold btn-sm" href="beta.html">Get the beta</a>
+      <a class="btn btn-gold btn-sm" href="index.html#waitlist">Join the waitlist</a>
     </nav>
   </div>
 </header>
@@ -104,7 +104,6 @@ FOOTER = f"""<footer class="site-footer">
         <li><a href="terms.html">Terms of Service</a></li>
         <li><a href="safety-tips.html">Safety</a></li>
         <li><a href="community-guidelines.html">Community Guidelines</a></li>
-        <li><a href="beta.html">Get the beta</a></li>
         <li><a href="grievance.html">Grievance Officer</a></li>
         <li><a href="child-safety.html">Child Safety</a></li>
         <li><a href="delete-account.html">Delete account</a></li>
@@ -157,11 +156,10 @@ def build_legal():
 
 def build_pages():
     for name, title, desc in [
-        ("index.html", "OyeBuddy – Dating & Social App | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating & social app in India. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Free Android beta."),
+        ("index.html", "OyeBuddy – Dating & Social App | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating & social app in India. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Coming soon on Google Play."),
         ("about.html", "About OyeBuddy | Dating & Social App Made in India", "OyeBuddy is a dating & social app made in India by Oyeteck Innovations. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
-        ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: how to download the Android beta, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
+        ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: when it launches on Google Play, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
         ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
-        ("beta.html", "Download OyeBuddy Android Beta | Dating & Social App", "Download the OyeBuddy Android beta. Meet real people nearby and make plans, 18+ only. Free during the beta."),
         ("404.html", "Page not found | OyeBuddy", "This page does not exist. Go back to OyeBuddy."),
     ]:
         src = (TOOLS / "pages" / name).read_text()
@@ -176,7 +174,7 @@ def build_pages():
         print("wrote", name)
 
 def build_sitemap():
-    urls = ["", "about.html", "faq.html", "beta.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
+    urls = ["", "about.html", "faq.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
     items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-14</lastmod></url>\n" for u in urls)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n')
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
