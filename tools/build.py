@@ -20,8 +20,8 @@ SUPPORT = "support@oyebuddy.in"
 GRIEVANCE = "grievance@oyebuddy.in"
 
 LEGAL = [  # (md file, output, nav label, meta description)
-    ("privacy-policy.md", "privacy.html", "Privacy", "How Oyeteck Innovations collects, uses and protects your personal data in the OyeBuddy dating app, under India's DPDP Act 2023."),
-    ("terms-of-service.md", "terms.html", "Terms", "The Terms of Service for OyeBuddy, the Indian dating app for meeting real people nearby."),
+    ("privacy-policy.md", "privacy.html", "Privacy", "How Oyeteck Innovations collects, uses and protects your personal data in OyeBuddy, The Social Plans App (dating app), under India's DPDP Act 2023."),
+    ("terms-of-service.md", "terms.html", "Terms", "The Terms of Service for OyeBuddy, The Social Plans App — a dating app in India to meet new people nearby."),
     ("community-guidelines.md", "community-guidelines.html", "Community Guidelines", "The rules that keep OyeBuddy kind, real and safe: be real, be respectful, no scams, report and block."),
     ("safety-tips.md", "safety-tips.html", "Safety tips", "Simple habits for meeting someone from OyeBuddy safely, plus India emergency helplines."),
     ("child-safety.md", "child-safety.html", "Child Safety", "OyeBuddy child safety standards (CSAE policy): zero tolerance for child sexual abuse and CSAM, strictly 18+, in-app reporting, and reporting to NCMEC and Indian authorities."),
@@ -45,7 +45,7 @@ def head(title, desc, path, extra=""):
 <meta name="theme-color" content="#070706">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
-{'<meta name="keywords" content="OyeBuddy, Oye Buddy, OyeBuddy app, dating app, social app, dating and social app India, cafe plans, movie plans, travel plans, meetup plans">'+chr(10) if path == 'index.html' else ''}<meta property="og:type" content="website">
+{'<meta name="keywords" content="OyeBuddy, The Social Plans App, dating app, dating app India, meet new people, make friends, find a date, singles nearby, social plans, cafe plans, movie plans">'+chr(10) if path == 'index.html' else ''}<meta property="og:type" content="website">
 <meta property="og:site_name" content="OyeBuddy">
 <meta property="og:locale" content="en_IN">
 <meta property="og:title" content="{html.escape(title)}">
@@ -54,7 +54,7 @@ def head(title, desc, path, extra=""):
 <meta property="og:image" content="{BASE_URL}/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="OyeBuddy: gold pin logo and app screens on black">
+<meta property="og:image:alt" content="OyeBuddy — The Social Plans App: dating app to meet new people nearby">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{html.escape(title)}">
 <meta name="twitter:description" content="{html.escape(desc)}">
@@ -94,11 +94,13 @@ FOOTER = f"""<footer class="site-footer">
     <div class="foot-top">
       <div class="foot-brand">
         <a class="brand" href="index.html" aria-label="OyeBuddy home">{PIN}<span>OyeBuddy</span></a>
-        <p>Meet real people nearby.</p>
+        <p>The Social Plans App. Got a plan? Find your Buddy.</p>
         <p><a href="mailto:{SUPPORT}">{SUPPORT}</a></p>
       </div>
       <ul class="foot-links">
         <li><a href="about.html">About</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="terms.html">Terms of Service</a></li>
@@ -156,10 +158,12 @@ def build_legal():
 
 def build_pages():
     for name, title, desc in [
-        ("index.html", "OyeBuddy – Dating & Social App | Meet, Chat & Make Plans", "OyeBuddy is an 18+ dating & social app in India. Find buddies for cafe plans, movie plans, travel plans and meetups nearby, and chat once you both like. Coming soon on Google Play."),
-        ("about.html", "About OyeBuddy | Dating & Social App Made in India", "OyeBuddy is a dating & social app made in India by Oyeteck Innovations. Learn why we built a safer way to meet people nearby, and how we protect privacy."),
-        ("faq.html", "OyeBuddy FAQ | Is it free, safe, who can join, how to delete", "Answers about OyeBuddy: when it launches on Google Play, privacy and exact location, safety tools, who can join (18+), and how to delete your account."),
+        ("index.html", "OyeBuddy – The Social Plans App | Dating App to Meet New People", "OyeBuddy is The Social Plans App — an 18+ dating app in India to meet new people, make friends, find a date, and post plans with singles nearby. Got a plan? Find your Buddy. Coming soon on Google Play."),
+        ("about.html", "About OyeBuddy | The Social Plans App Made in India", "OyeBuddy is The Social Plans App — a dating app made in India to meet new people, make friends and find a date nearby. Learn how we protect privacy."),
+        ("faq.html", "OyeBuddy FAQ | Dating app, plans, safety, who can join", "Answers about OyeBuddy, The Social Plans App: dating app for India, Buddy Feed plans, meet new people nearby, safety tools, 18+, and how to delete your account."),
         ("delete-account.html", "Delete your OyeBuddy account", "How to delete your OyeBuddy account and data, in the app or by email, and what is deleted or kept."),
+        ("support.html", "OyeBuddy Support | Help & Contact", "Get help with OyeBuddy, The Social Plans App. Email support for the dating app, account help, safety reports, or feedback."),
+        ("contact.html", "Contact OyeBuddy | Support & Grievance", "Contact OyeBuddy support or the Grievance Officer. The Social Plans App — dating app help for adults in India."),
         ("404.html", "Page not found | OyeBuddy", "This page does not exist. Go back to OyeBuddy."),
     ]:
         src = (TOOLS / "pages" / name).read_text()
@@ -174,8 +178,8 @@ def build_pages():
         print("wrote", name)
 
 def build_sitemap():
-    urls = ["", "about.html", "faq.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
-    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-14</lastmod></url>\n" for u in urls)
+    urls = ["", "about.html", "faq.html", "support.html", "contact.html", "delete-account.html"] + [o for _, o, _, _ in LEGAL]
+    items = "".join(f"  <url><loc>{BASE_URL}/{u[:-5] if u.endswith('.html') else u}</loc><lastmod>2026-10-31</lastmod></url>\n" for u in urls)
     (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}</urlset>\n')
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
     print("wrote sitemap.xml, robots.txt")
